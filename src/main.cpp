@@ -789,7 +789,7 @@ void CTxMemPool::pruneSpent(const uint256 &hashTx, CCoins &coins)
 bool CTxMemPool::accept(CValidationState &state, const CTransaction &tx, bool fLimitFree,
                         bool* pfMissingInputs)
 {
-  fprintf(stdout, "TESTTESTEST");
+  fprintf(stdout, "%s", "TESTTESTEST");
     if (pfMissingInputs)
         *pfMissingInputs = false;
 
