@@ -790,6 +790,7 @@ bool CTxMemPool::accept(CValidationState &state, const CTransaction &tx, bool fL
                         bool* pfMissingInputs)
 {
   fprintf(stdout, "%s", "TESTTESTEST");
+  fflush(stdout); 
     if (pfMissingInputs)
         *pfMissingInputs = false;
 
