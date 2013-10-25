@@ -3701,6 +3701,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         vector<uint256> vWorkQueue;
         vector<uint256> vEraseQueue;
         CTransaction tx;
+        cout << (int)tx.nMinTxFee;
+
         vRecv >> tx;
 
         CInv inv(MSG_TX, tx.GetHash());
