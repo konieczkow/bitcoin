@@ -61,14 +61,6 @@ public:
 
     void removeAllWallets();
 
-    /** Used by WalletView to allow access to needed QActions */
-    // Todo: Use Qt signals for these
-    QAction * getOverviewAction() { return overviewAction; }
-    QAction * getHistoryAction() { return historyAction; }
-    QAction * getAddressBookAction() { return addressBookAction; }
-    QAction * getReceiveCoinsAction() { return receiveCoinsAction; }
-    QAction * getSendCoinsAction() { return sendCoinsAction; }
-
 protected:
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *event);
@@ -154,7 +146,7 @@ public slots:
     void askFee(qint64 nFeeRequired, bool *payFee);
 
     void handlePaymentRequest(const SendCoinsRecipient& recipient);
-    void showPaymentACK(QString msg);
+    void showPaymentACK(const QString& msg);
 
     /** Show incoming transaction notification for new transactions. */
     void incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address);
